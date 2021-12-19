@@ -1,0 +1,55 @@
+{
+  "name": "eip-nft",
+  "version": "0.0.1",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run clean && npm run compile",
+    "clean": "npx hardhat clean",
+    "compile": "npx hardhat compile",
+    "test": "npx hardhat test",
+    "pretty": "npx prettier --write 'contracts/**/*.sol'",
+    "coverage": "npm run build && npx hardhat coverage --temp artifacts --network coverage",
+    "flatten": "npx hardhat flatten > flatten_output.sol",
+    "deploy-rinkeby": "npx hardhat run --network rinkeby scripts/deploy.ts"
+  },
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "2.0.2",
+    "@nomiclabs/hardhat-etherscan": "2.1.2",
+    "@nomiclabs/hardhat-waffle": "2.0.1",
+    "@openzeppelin/contracts": "4.3.2",
+    "@pinata/sdk": "^1.1.23",
+    "@typechain/ethers-v5": "7.0.0",
+    "@typechain/hardhat": "2.2.0",
+    "@types/chai": "4.2.18",
+    "@types/chai-as-promised": "7.1.1",
+    "@types/elliptic": "6.4.13",
+    "@types/mocha": "8.2.2",
+    "@types/node": "16.9.0",
+    "chai": "4.3.4",
+    "chai-as-promised": "7.1.1",
+    "dotenv": "9.0.2",
+    "eth-gas-reporter": "0.2.22",
+    "ethereum-waffle": "3.3.0",
+    "ethers": "5.1.4",
+    "hardhat": "^2.6.4",
+    "hardhat-abi-exporter": "2.2.1",
+    "hardhat-gas-reporter": "^1.0.4",
+    "jose": "3.14.3",
+    "jsdom": "^18.0.0",
+    "node-html-parser": "^5.0.0",
+    "prettier": "2.3.2",
+    "prettier-plugin-solidity": "1.0.0-beta.17",
+    "solidity-coverage": "0.7.16",
+    "ts-generator": "0.1.1",
+    "ts-node": "9.1.1",
+    "typechain": "5.0.0",
+    "typescript": "4.2.4",
+    "web3": "1.6.0"
+  },
+  "prettier": {
+    "printWidth": 120
+  },
+  "dependencies": {
+    "hardhat-contract-sizer": "^2.1.1"
+  }
+}
